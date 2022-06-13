@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
     private bool grounded;
     private Rigidbody2D rb;
 
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -24,7 +25,7 @@ public class CharacterController : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && grounded)
         {
-            grounded = false;
+            // grounded = false;
             jumping = true;
         }
 
@@ -42,10 +43,8 @@ public class CharacterController : MonoBehaviour
         {
             velocity = Vector2.zero;
         }
-        // if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W))
-        // {
-        //     jumpVelocity = Vector2.zero;
-        // }
+
+        Debug.DrawLine(new Vector3(transform.position.x, transform.position.y - 0.55f, transform.position.z), new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Color.red);
     }
 
     void FixedUpdate()
@@ -60,15 +59,13 @@ public class CharacterController : MonoBehaviour
         if (rb.velocity.y < 0 && !grounded)
         {
             rb.AddForce(-1 * transform.up * fall, ForceMode2D.Impulse);
-            Debug.Log("down test");
         }
-    }
+        
+        Vector2 position = new Vector2(transform.position.x, transform.position.y);
+        //grounded = Physics2D.Raycast(new Vector2(position.x, position.y - 0.55f), Vector2.down, 1f, 1 << LayerMask.NameToLayer("Ground"));
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 6)
-        {
-            grounded = true;
-        }
+        grounded = Physics2D.BoxCast(new Vector2(position.x, position.y - 0.55f), new Vector2(1, 0.5f), 0f, Vector2.down, 0f, 1 << LayerMask.NameToLayer("Ground"));
+        
+        
     }
 }
