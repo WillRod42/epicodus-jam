@@ -62,10 +62,8 @@ public class CharacterController : MonoBehaviour
         }
         
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
-        //grounded = Physics2D.Raycast(new Vector2(position.x, position.y - 0.55f), Vector2.down, 1f, 1 << LayerMask.NameToLayer("Ground"));
-
+        // grounded = Physics2D.Raycast(new Vector2(position.x, position.y - 0.55f), Vector2.down, 1f, 1 << LayerMask.NameToLayer("Ground"));
         grounded = Physics2D.BoxCast(new Vector2(position.x, position.y - 0.55f), new Vector2(1, 0.5f), 0f, Vector2.down, 0f, 1 << LayerMask.NameToLayer("Ground"));
-        
         
     }
 }
