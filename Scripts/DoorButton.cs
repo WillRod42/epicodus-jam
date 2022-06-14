@@ -6,6 +6,8 @@ public class DoorButton : MonoBehaviour
 {
     private BoxCollider2D bc;
     public GameObject door;
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
 
     void Awake()
     {
@@ -27,7 +29,8 @@ public class DoorButton : MonoBehaviour
     {
         if(other.gameObject.GetComponent<CharacterController>())
         {
-        Destroy(door);
+            spriteRenderer.sprite = newSprite;
+            Destroy(door);
         }
     }
 }
