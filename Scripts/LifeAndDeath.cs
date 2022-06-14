@@ -6,6 +6,7 @@ public class LifeAndDeath : MonoBehaviour
 {
   public int maxHealth;
   public AudioSource destroySound;
+  public AudioSource hitSound;
   private int currentHealth;
   private bool destroySoundPlayed = false;
   // Start is called before the first frame update
@@ -37,6 +38,10 @@ public class LifeAndDeath : MonoBehaviour
   }
   public void TakeDamage(int damage)
   {
+    if(hitSound != null)
+    {
+      hitSound.Play();
+    }
     currentHealth -= damage;
     Debug.Log(currentHealth + "/" + maxHealth);
   }
