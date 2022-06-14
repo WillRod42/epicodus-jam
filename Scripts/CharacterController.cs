@@ -59,12 +59,12 @@ public class CharacterController : MonoBehaviour
         {
             velocity = Vector2.zero;
         }
-        if(Input.GetKeyDown(KeyCode.C) && velocity.x >= 0)
+        if(Input.GetKeyDown(KeyCode.C) && sr.flipX == false)
         {
           transform.GetChild(0).gameObject.SetActive(true);
           transform.GetComponentInChildren<Attack>().ToungeAttack();
         }
-        else if(Input.GetKeyDown(KeyCode.C) && velocity.x <= 0)
+        else if(Input.GetKeyDown(KeyCode.C) && sr.flipX == true)
         {
           transform.GetChild(1).gameObject.SetActive(true);
           transform.GetComponentInChildren<Attack>().ToungeAttack();
