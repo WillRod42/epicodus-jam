@@ -59,6 +59,16 @@ public class CharacterController : MonoBehaviour
         {
             velocity = Vector2.zero;
         }
+        if(Input.GetKeyDown(KeyCode.C) && sr.flipX == false)
+        {
+          transform.GetChild(0).gameObject.SetActive(true);
+          transform.GetComponentInChildren<Attack>().ToungeAttack();
+        }
+        else if(Input.GetKeyDown(KeyCode.C) && sr.flipX == true)
+        {
+          transform.GetChild(1).gameObject.SetActive(true);
+          transform.GetComponentInChildren<Attack>().ToungeAttack();
+        }
 
         Debug.DrawLine(new Vector3(transform.position.x, transform.position.y - 0.55f, transform.position.z), new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Color.red);
     }
