@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
   public int damage;
+  public AudioSource attackSound;
   private bool attacking;
   private float timer;
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class Attack : MonoBehaviour
     {
       if(!attacking)
       {
+        attackSound.Play();
         attacking = true;
         Invoke("ResetAttack", 0.4f);
       }
