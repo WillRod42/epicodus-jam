@@ -5,7 +5,9 @@ using UnityEngine;
 public class LifeAndDeath : MonoBehaviour
 {
   public int maxHealth;
+  public AudioSource destroySound;
   private int currentHealth;
+  private bool destroySoundPlayed = false;
   // Start is called before the first frame update
   void Start()
   {
@@ -17,7 +19,12 @@ public class LifeAndDeath : MonoBehaviour
   {
     if(currentHealth <= 0)
     {
-      Destroy(gameObject);
+      if(destroySound != null && destroySoundPlayed == false)
+      {
+        destroySoundPlayed = true;
+        destroySound.Play();
+      }
+      Invoke("DestroyGameObject", 0.2f);
     }
   }
   public void Heal(int amount)
@@ -36,5 +43,9 @@ public class LifeAndDeath : MonoBehaviour
   public bool healthCheck()
   {
     return currentHealth < maxHealth;
+  }
+  void DestroyGameObject()
+  {
+    Destroy(gameObject);
   }
 }

@@ -10,9 +10,12 @@ public class CharacterController : MonoBehaviour
     public Animator animator;
 
     public Vector2 velocity;
+    public AudioSource jumpSound; 
+    public AudioSource walkSound;
     private bool bounced;
     private bool jumping;
     private bool grounded;
+    private bool walkSoundPlaying;
     
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -26,12 +29,14 @@ public class CharacterController : MonoBehaviour
         jumping = false;
         grounded = true;
         bounced = false;
+        walkSoundPlaying = false;
     }
 
     void Update()
     {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && grounded)
         {
+            jumpSound.Play();
             jumping = true;
         }
 
@@ -42,12 +47,14 @@ public class CharacterController : MonoBehaviour
             {
                 velocity = new Vector2(-speed, 0);
                 sr.flipX = true;
+                PlayWalkSound();
             }
 
             if (Input.GetKey(KeyCode.D))
             {
                 velocity = new Vector2(speed, 0);
                 sr.flipX = false;
+                PlayWalkSound();
             }
         }
         else
@@ -101,5 +108,18 @@ public class CharacterController : MonoBehaviour
     void ResetBounce()
     {
         bounced = false;
+    }
+    void PlayWalkSound()
+    {
+      if(walkSoundPlaying == false)
+      {
+        walkSound.Play();
+        walkSoundPlaying = true;
+        Invoke("ResetWalkSound", 0.2f);
+      }
+    }
+    void ResetWalkSound()
+    {
+      walkSoundPlaying = false;
     }
 }
