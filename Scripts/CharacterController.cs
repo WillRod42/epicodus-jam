@@ -47,14 +47,21 @@ public class CharacterController : MonoBehaviour
             {
                 velocity = new Vector2(-speed, 0);
                 sr.flipX = true;
-                PlayWalkSound();
+                if(walkSound != null)
+                {
+                  PlayWalkSound();
+                }
+                
             }
 
             if (Input.GetKey(KeyCode.D))
             {
                 velocity = new Vector2(speed, 0);
                 sr.flipX = false;
-                PlayWalkSound();
+                if(walkSound != null)
+                {
+                  PlayWalkSound();
+                }
             }
         }
         else
