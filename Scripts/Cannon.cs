@@ -10,6 +10,7 @@ public class Cannon : MonoBehaviour
   public GameObject projectile;
   public Transform firePosition;
   public Vector2 firingDirection;
+  public AudioSource cannonShotSound;
   private bool fired = false;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,10 @@ public class Cannon : MonoBehaviour
     {
       if(!fired)
       {
+        if(cannonShotSound != null)
+        {
+          cannonShotSound.Play();
+        }
         GameObject Newprojectile = Instantiate(projectile, firePosition.position, Quaternion.identity);
         Newprojectile.GetComponent<Rigidbody2D>().AddForce(firingDirection * speed, ForceMode2D.Impulse);
         Newprojectile.GetComponent<Projectile>().SetLifeTime(range);
