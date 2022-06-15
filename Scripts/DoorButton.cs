@@ -8,6 +8,8 @@ public class DoorButton : MonoBehaviour
     public GameObject door;
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
+    public AudioSource buttonPressSound;
+    private bool buttonPressSoundPlayed = false;
 
     void Awake()
     {
@@ -29,6 +31,11 @@ public class DoorButton : MonoBehaviour
     {
         if(other.gameObject.GetComponent<CharacterController>())
         {
+          if(!buttonPressSoundPlayed)
+          {
+            buttonPressSound.Play();
+            buttonPressSoundPlayed = true;
+          }
             spriteRenderer.sprite = newSprite;
             Destroy(door);
         }
