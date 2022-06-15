@@ -32,7 +32,9 @@ public class CharacterController : MonoBehaviour
     const string PLAYER_ATTACK = "Attack";
     const string PLAYER_JUMP = "Jump";
     const string PLAYER_WALK_ATTACK = "Walk Attack";
+    const string PLAYER_JUMP_ATTACK = "Air Attack";
     const float ATTACK_DELAY = 1f;
+    const float JUMP_ATTACK_DELAY = 2f / 3f;
 
     void Start()
     {
@@ -129,7 +131,7 @@ public class CharacterController : MonoBehaviour
         }
         
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
-        grounded = Physics2D.BoxCast(new Vector2(position.x, position.y - 0.55f), new Vector2(1, 0.5f), 0f, Vector2.down, 0f, 1 << LayerMask.NameToLayer("Ground"));
+        grounded = Physics2D.BoxCast(new Vector2(position.x, position.y - 0.6f), new Vector2(0.4f, 0.1f), 0f, Vector2.down, 0f, 1 << LayerMask.NameToLayer("Ground"));
 
         if (attackPressed)
         {
@@ -137,15 +139,22 @@ public class CharacterController : MonoBehaviour
             if (!attacking)
             {
                 attacking = true;
-                if (velocity.x != 0 && grounded)
+                if (!grounded)
+                {
+                    ChangeAnimationState(PLAYER_JUMP_ATTACK);
+                    Invoke("AttackFinished", JUMP_ATTACK_DELAY);
+                }
+                else if (velocity.x != 0)
                 {
                     ChangeAnimationState(PLAYER_WALK_ATTACK);
+                    Invoke("AttackFinished", ATTACK_DELAY);
                 }
                 else
                 {
                     ChangeAnimationState(PLAYER_ATTACK);
+                    Invoke("AttackFinished", ATTACK_DELAY);
                 }
-                Invoke("AttackFinished", ATTACK_DELAY);
+                
             }
         }
 

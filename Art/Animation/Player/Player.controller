@@ -24,7 +24,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JumpRight
+  m_Name: Jump Right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -38,32 +38,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: a5a1dfa3fcd069944a974d22e73e7478, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-8502236202207631586
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Walk Attack Left
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 05ff4ceec415f1b4d86156e9f2e05cf1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -95,7 +69,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-6658599123687033078
+--- !u!1102 &-6027579313595177331
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -245,7 +219,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WalkAttackLeft
+  m_Name: Walk Attack Left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -259,6 +233,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 189bff5b3b86b8f4191092aff0cccb4c, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-3514584515175062668
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Air Attack Left
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 8329aaf52fe6f4443a630f213557bc5e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -292,26 +292,23 @@ AnimatorStateMachine:
     m_State: {fileID: -4502359951591704338}
     m_Position: {x: 120, y: 630, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -8502236202207631586}
-    m_Position: {x: 120, y: 1030, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -564844077917095312}
     m_Position: {x: 120, y: 980, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 6579046327731172818}
-    m_Position: {x: 120, y: 930, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -6658599123687033078}
+    m_State: {fileID: -9132020660719618053}
     m_Position: {x: 120, y: 880, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -9132020660719618053}
-    m_Position: {x: 155, y: 945, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: 3866294093560347498}
-    m_Position: {x: 190, y: 1010, z: 0}
+    m_Position: {x: 120, y: 930, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3662942235791688742}
-    m_Position: {x: 225, y: 1075, z: 0}
+    m_Position: {x: 120, y: 1030, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -6027579313595177331}
+    m_Position: {x: 120, y: 1080, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -3514584515175062668}
+    m_Position: {x: 120, y: 1130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -438,7 +435,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JumpLeft
+  m_Name: Jump Left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -495,32 +492,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 8c550c5bb168e2e4094433f02897c02d, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &6579046327731172818
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Air Attack Left
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0dd9861e082b50c4a91a9a2815951255, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
