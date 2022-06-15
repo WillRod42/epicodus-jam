@@ -14,13 +14,12 @@ public class CharacterController : MonoBehaviour
     public AudioClip walkSound;
 
     private bool bounced;
-    private bool jumping;
+    private bool jumpPressed;
     private bool grounded;
     private bool facingRight;
     private bool attacking;
     private bool attackPressed;
     private string currentState;
-    private float attackDelay;
     private bool walkSoundPlaying;
     
     private Rigidbody2D rb;
@@ -32,6 +31,8 @@ public class CharacterController : MonoBehaviour
     const string PLAYER_WALK = "Walk";
     const string PLAYER_ATTACK = "Attack";
     const string PLAYER_JUMP = "Jump";
+    const string PLAYER_WALK_ATTACK = "Walk Attack";
+    const float ATTACK_DELAY = 1f;
 
     void Start()
     {
@@ -40,12 +41,11 @@ public class CharacterController : MonoBehaviour
         animator = playerSprite.GetComponent<Animator>();
         player = GetComponent<AudioSource>();
         
-        jumping = false;
+        jumpPressed = false;
         grounded = true;
         bounced = false;
         facingRight = true;
         attacking = false;
-        attackDelay = 0.5f;
         walkSoundPlaying = false;
         hasFirefly = false;
 
@@ -58,7 +58,7 @@ public class CharacterController : MonoBehaviour
         {
             Debug.Log("jump");
             PlayJumpSound();
-            jumping = true;
+            jumpPressed = true;
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -112,10 +112,10 @@ public class CharacterController : MonoBehaviour
             transform.Translate(velocity);
         }
 
-        if (jumping)
+        if (jumpPressed)
         {
             rb.AddForce(transform.up * jump, ForceMode2D.Impulse);
-            jumping = false;
+            jumpPressed = false;
 
             if (!attacking)
             {
@@ -137,14 +137,21 @@ public class CharacterController : MonoBehaviour
             if (!attacking)
             {
                 attacking = true;
-                ChangeAnimationState(PLAYER_ATTACK);
-                Invoke("AttackFinished", attackDelay);
+                if (velocity.x != 0 && grounded)
+                {
+                    ChangeAnimationState(PLAYER_WALK_ATTACK);
+                }
+                else
+                {
+                    ChangeAnimationState(PLAYER_ATTACK);
+                }
+                Invoke("AttackFinished", ATTACK_DELAY);
             }
         }
 
-        if (!attacking)
+        if (!attacking && grounded)
         {
-            if (Mathf.Abs(velocity.x) > 0)
+            if (velocity.x != 0)
             {
                 ChangeAnimationState(PLAYER_WALK);
             }
