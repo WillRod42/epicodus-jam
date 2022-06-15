@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 488c09d342d448c459c95ee7bc2b542c
+guid: 8c149552050c2be4886f8b6d5fb94c8e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,43 +101,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking-sheet_0
+      name: water_0
       rect:
         serializedVersion: 2
         x: 0
@@ -166,50 +130,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9e6e2605d760345b56c0c1e0e0ed4c
-      internalID: 52764353
+      spriteID: bed3fa0f52ee9e94e8e82803f748bd70
+      internalID: -996991837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking-sheet_1
+      name: water_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 0
+        x: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb5f9defbd1a2540a70682936844b93
-      internalID: 316310549
+      spriteID: 73dd49e509b62f64dbfaa0e309cb2cdf
+      internalID: 1051193130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking-sheet_2
+      name: water_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 0
+        x: 0
+        y: 32
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f30ecd19785934cadbb2e316e49353
-      internalID: 516613107
+      spriteID: 8defd001d1b23d645a4cb0811f799d7c
+      internalID: 177619269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3ad2214c0ff8149a1ebb398b55a70b
+      internalID: 1029047935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d90074a900dd9b4f958e54c2923f095
+      internalID: -1723617428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416a13ebd24e6924c94f4660a1994822
+      internalID: 681243887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2df2f6cd9b47f4f9f87a5d2d444ff2
+      internalID: -1382394859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8007fa998ea6ead46a388e9c0d093474
+      internalID: -2117262018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70df1044d82bece47bbd6351920303c4
+      internalID: 1262370428
       vertices: []
       indices: 
       edges: []
@@ -225,9 +315,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walking-sheet_0: 52764353
-      walking-sheet_2: 516613107
-      walking-sheet_1: 316310549
+      water_1: 1051193130
+      water_5: 681243887
+      water_3: 1029047935
+      water_4: -1723617428
+      water_0: -996991837
+      water_6: -1382394859
+      water_8: 1262370428
+      water_7: -2117262018
+      water_2: 177619269
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
