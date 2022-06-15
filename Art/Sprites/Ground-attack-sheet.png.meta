@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 488c09d342d448c459c95ee7bc2b542c
+guid: 0fdc62e9cb7b6c147966c0b84ce4bb88
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -152,64 +152,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking-sheet_0
+      name: Ground-attack-sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 48
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9e6e2605d760345b56c0c1e0e0ed4c
-      internalID: 52764353
+      spriteID: d0b7a2f5e0a6735469040cd6bcddc936
+      internalID: -1564147390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking-sheet_1
+      name: Ground-attack-sheet_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 48
         y: 0
-        width: 16
+        width: 48
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb5f9defbd1a2540a70682936844b93
-      internalID: 316310549
+      spriteID: 0580c455317a5c247a4bfdaa8e583b61
+      internalID: 361092840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking-sheet_2
+      name: Ground-attack-sheet_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 96
         y: 0
-        width: 16
+        width: 48
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f30ecd19785934cadbb2e316e49353
-      internalID: 516613107
+      spriteID: 8281f60228ffa8a4b831bc47d6bbdac6
+      internalID: -1305413864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground-attack-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da29f9fb95b9174387c637ff055ecb9
+      internalID: 1678214466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground-attack-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02486711fb8501f48a53644bee58d2df
+      internalID: 1087629329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground-attack-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca4ad9c9dd0e3a469c95063e4fd1454
+      internalID: 1903389989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground-attack-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bc7d4c1493bf3438e7df1f09314fb8
+      internalID: 1368878170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground-attack-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b560d2e573dcb94f979c62409232029
+      internalID: -754668299
       vertices: []
       indices: 
       edges: []
@@ -225,9 +330,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walking-sheet_0: 52764353
-      walking-sheet_2: 516613107
-      walking-sheet_1: 316310549
+      Ground-attack-sheet_3: 1678214466
+      Ground-attack-sheet_0: -1564147390
+      Ground-attack-sheet_1: 361092840
+      Ground-attack-sheet_4: 1087629329
+      Ground-attack-sheet_6: 1368878170
+      Ground-attack-sheet_7: -754668299
+      Ground-attack-sheet_2: -1305413864
+      Ground-attack-sheet_5: 1903389989
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
