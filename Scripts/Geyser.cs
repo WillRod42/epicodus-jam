@@ -7,7 +7,6 @@ public class Geyser : MonoBehaviour
   public float timeToRise;
   public float timeBetweenRising;
   public float timeUntilFall;
-  private float timerForRising;
   private float timerForBetweenRising;
   private float timerForFalling;
   private float initalYPosition;
@@ -19,51 +18,64 @@ public class Geyser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      timerForRising = timeToRise;
       timerForBetweenRising = timeBetweenRising;
       initalYPosition = transform.position.y;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-      
-      if(timerForBetweenRising <= 0f && transform.position.y <= initalYPosition + (transform.localScale.y / 3f))
+      if(timerForBetweenRising <= 0f && !falling)
       {
-        Vector2 position = new Vector2(0f, (transform.localScale.y * timeToRise) / 1000f);
-        transform.Translate(position);
-        timerForRising -= Time.deltaTime;
+        Rising();
       }
-      else if (timerForBetweenRising <= 0f && transform.position.y <= initalYPosition + transform.localScale.y)
-      {
-        Vector2 position = new Vector2(0f, (transform.localScale.y * timeToRise) / 100f);
-        transform.Translate(position);
-        timerForRising -= Time.deltaTime;
-      }
-      if(transform.position.y >= initalYPosition + transform.localScale.y && risen == false)
+      if(transform.position.y >= initalYPosition + transform.localScale.y && !risen && !falling)
       {
         risen = true;
         timerForFalling = timeUntilFall;
       }
-      if(risen == true && timerForFalling > 0f)
+      else if(risen && timerForFalling > 0f)
       {
-        timerForFalling -= Time.deltaTime;
+        timerForFalling -= Time.fixedDeltaTime;
+        if(timerForFalling <= 0f)
+        {
+          risen = false;
+          falling = true;
+          timerForBetweenRising = timeBetweenRising;
+        }
       }
-      else if((risen == true || falling == true) && timerForFalling <= 0f)
+      if(falling)
       {
-        risen = false;
-        Vector2 position = new Vector2(0f, -0.5f);
-        transform.Translate(position);
-        timerForBetweenRising = timeBetweenRising;
-        falling = true;
+        Falling();
       }
-      if(falling == true && transform.position.y <= initalYPosition)
+      if(falling && transform.position.y <= initalYPosition)
       {
         falling = false;
       }
-      if(falling == false && timerForBetweenRising >= 0)
+      if(!falling && timerForBetweenRising >= 0)
       {
-        timerForBetweenRising -= Time.deltaTime;
+        timerForBetweenRising -= Time.fixedDeltaTime;
+      }
+    }
+    void Rising()
+    {
+      if(transform.position.y <= initalYPosition + (transform.localScale.y / 5f))
+      {
+        Vector2 position = new Vector2(0f, (transform.localScale.y * timeToRise) / 1000f);
+        transform.Translate(position);
+      }
+      else if (transform.position.y <= initalYPosition + transform.localScale.y)
+      {
+        Vector2 position = new Vector2(0f, (transform.localScale.y * timeToRise) / 100f);
+        transform.Translate(position);
+      }
+    }
+    void Falling()
+    {
+      if(!Mathf.Approximately(transform.position.y, initalYPosition))
+      {
+        Vector2 position = new Vector2(0f, -0.5f);
+        transform.Translate(position);
       }
     }
 }
