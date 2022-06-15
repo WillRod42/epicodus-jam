@@ -49,7 +49,10 @@ public class LifeAndDeath : MonoBehaviour
     if(healthCheck())
     {
       currentHealth += amount;
-      Debug.Log(currentHealth + "/" + maxHealth);
+      if(healthBar != null)
+      { 
+        healthBar.SetHealth(currentHealth);
+      }
     }
   }
   public void TakeDamage(int damage)
@@ -59,7 +62,6 @@ public class LifeAndDeath : MonoBehaviour
       hitSound.Play();
     }
     currentHealth -= damage;
-    Debug.Log(currentHealth + "/" + maxHealth);
     if(healthBar != null)
     { 
       healthBar.SetHealth(currentHealth);
