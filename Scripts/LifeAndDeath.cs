@@ -9,14 +9,17 @@ public class LifeAndDeath : MonoBehaviour
   public AudioSource destroySound;
   public AudioSource hitSound;
   public HealthBar healthBar;
-  private int currentHealth;
+  public int currentHealth;
   private bool destroySoundPlayed = false;
 
   // Start is called before the first frame update
   void Start()
   {
     currentHealth = maxHealth;
-    healthBar.SetMaxHealth(maxHealth);
+    if(healthBar != null)
+    {
+      healthBar.SetMaxHealth(maxHealth);
+    }
   }
 
   // Update is called once per frame
@@ -46,7 +49,10 @@ public class LifeAndDeath : MonoBehaviour
     if(healthCheck())
     {
       currentHealth += amount;
-      Debug.Log(currentHealth + "/" + maxHealth);
+      if(healthBar != null)
+      { 
+        healthBar.SetHealth(currentHealth);
+      }
     }
   }
   public void TakeDamage(int damage)
@@ -56,9 +62,10 @@ public class LifeAndDeath : MonoBehaviour
       hitSound.Play();
     }
     currentHealth -= damage;
-    Debug.Log(currentHealth + "/" + maxHealth);
-
-    healthBar.SetHealth(currentHealth);
+    if(healthBar != null)
+    { 
+      healthBar.SetHealth(currentHealth);
+    }
   }
   public bool healthCheck()
   {
