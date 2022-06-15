@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour
     public float jump;
     public float fall;
     public Animator animator;
-
+    public bool hasFirefly;
     public Vector2 velocity;
     public AudioSource jumpSound; 
     public AudioSource walkSound;
@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
     private bool jumping;
     private bool grounded;
     private bool walkSoundPlaying;
+
     
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -30,12 +31,14 @@ public class CharacterController : MonoBehaviour
         grounded = true;
         bounced = false;
         walkSoundPlaying = false;
+        hasFirefly = false;
     }
 
     void Update()
     {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && grounded)
         {
+            Debug.Log("jump");
             jumpSound.Play();
             jumping = true;
         }
