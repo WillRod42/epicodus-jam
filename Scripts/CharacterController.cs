@@ -47,7 +47,7 @@ public class CharacterController : MonoBehaviour
             {
                 velocity = new Vector2(-speed, 0);
                 sr.flipX = true;
-                if(walkSound != null)
+                if(walkSound != null && grounded)
                 {
                   PlayWalkSound();
                 }
@@ -58,7 +58,7 @@ public class CharacterController : MonoBehaviour
             {
                 velocity = new Vector2(speed, 0);
                 sr.flipX = false;
-                if(walkSound != null)
+                if(walkSound != null && grounded)
                 {
                   PlayWalkSound();
                 }
@@ -118,7 +118,7 @@ public class CharacterController : MonoBehaviour
     }
     void PlayWalkSound()
     {
-      if(walkSoundPlaying == false)
+      if(walkSoundPlaying == false && grounded)
       {
         walkSound.Play();
         walkSoundPlaying = true;
