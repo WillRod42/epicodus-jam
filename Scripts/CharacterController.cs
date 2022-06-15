@@ -9,10 +9,9 @@ public class CharacterController : MonoBehaviour
     public float fall;
     public Vector2 velocity;
     public GameObject playerSprite;
-    public Animator animator;
     public bool hasFirefly;
-    public AudioSource jumpSound; 
-    public AudioSource walkSound;
+    public AudioClip jumpSound; 
+    public AudioClip walkSound;
 
     private bool bounced;
     private bool jumping;
@@ -27,6 +26,7 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator animator;
+    private AudioSource player;
 
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_WALK = "Walk";
@@ -35,9 +35,10 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         sr = playerSprite.GetComponent<SpriteRenderer>();
         animator = playerSprite.GetComponent<Animator>();
+        player = GetComponent<AudioSource>();
         
         jumping = false;
         grounded = true;
@@ -56,7 +57,7 @@ public class CharacterController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && grounded)
         {
             Debug.Log("jump");
-            jumpSound.Play();
+            PlayJumpSound();
             jumping = true;
         }
 
@@ -68,7 +69,7 @@ public class CharacterController : MonoBehaviour
                 facingRight = false;
                 if(walkSound != null && grounded)
                 {
-                  PlayWalkSound();
+                    PlayWalkSound();
                 }
             }
 
@@ -78,7 +79,7 @@ public class CharacterController : MonoBehaviour
                 facingRight = true;
                 if(walkSound != null && grounded)
                 {
-                  PlayWalkSound();
+                    PlayWalkSound();
                 }
             }
         }
@@ -89,13 +90,13 @@ public class CharacterController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.C) && sr.flipX == false)
         {
-          transform.GetChild(0).gameObject.SetActive(true);
-          transform.GetComponentInChildren<Attack>().ToungeAttack();
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetComponentInChildren<Attack>().ToungeAttack();
         }
         else if(Input.GetKeyDown(KeyCode.C) && sr.flipX == true)
         {
-          transform.GetChild(1).gameObject.SetActive(true);
-          transform.GetComponentInChildren<Attack>().ToungeAttack();
+            transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetComponentInChildren<Attack>().ToungeAttack();
         }
 
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)))
@@ -188,19 +189,26 @@ public class CharacterController : MonoBehaviour
     {
         attacking = false;
     }
+
+    private void PlayJumpSound()
+    {
+        player.clip = jumpSound;
+        player.Play();
+    }
     
     private void PlayWalkSound()
     {
-      if(walkSoundPlaying == false && grounded)
-      {
-        walkSound.Play();
+        if(walkSoundPlaying == false && grounded)
+        {
+        player.clip = walkSound;
+        player.Play();
         walkSoundPlaying = true;
         Invoke("ResetWalkSound", 0.2f);
-      }
+        }
     }
     
     private void ResetWalkSound()
     {
-      walkSoundPlaying = false;
+        walkSoundPlaying = false;
     }
 }
