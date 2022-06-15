@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeAndDeath : MonoBehaviour
 {
@@ -28,7 +29,16 @@ public class LifeAndDeath : MonoBehaviour
         destroySoundPlayed = true;
         destroySound.Play();
       }
-      Invoke("DestroyGameObject", 0.2f);
+      if(gameObject.name == "Player")
+      {
+        string currentScene = SceneManager.GetActiveScene().name; 
+        SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
+      }
+      else
+      {
+        Invoke("DestroyGameObject", 0.2f);
+      }
+      
     }
   }
   public void Heal(int amount)
