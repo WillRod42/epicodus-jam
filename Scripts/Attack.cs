@@ -7,26 +7,27 @@ public class Attack : MonoBehaviour
   public int damage;
   public AudioSource attackSound;
   private bool attacking;
-  private float timer;
+  // private float timer;
     // Start is called before the first frame update
     void Start()
     {
-      attacking = false;
+      // attacking = false;
       gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-      timer -= Time.deltaTime;
+      // timer -= Time.deltaTime;
     }
-    void OnTriggerStay2D(Collider2D obj)
+    void OnTriggerEnter2D(Collider2D obj)
     {
       LifeAndDeath enemyLifeAndDeath = obj.GetComponent<LifeAndDeath>();
-      if(enemyLifeAndDeath != null && timer <= 0)
+      if(enemyLifeAndDeath != null && enemyLifeAndDeath.currentHealth > 0)
       {
         enemyLifeAndDeath.TakeDamage(damage);
-        timer = 0.4f;
+        // timer = 0.4f;
+        // timer <= 0 
       }
     }
     public void ToungeAttack()
