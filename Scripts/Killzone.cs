@@ -21,7 +21,8 @@ public class Killzone : MonoBehaviour
     {
         if(other.gameObject.GetComponent<CharacterController>())
         {
-            SceneManager.LoadScene(Respawn);
+          string currentScene = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
         }
     }
 }
