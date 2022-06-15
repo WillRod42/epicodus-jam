@@ -13,4 +13,11 @@ public class DamageObject : MonoBehaviour
       obj.gameObject.GetComponent<LifeAndDeath>().TakeDamage(damage);
     }
   }
+  public void OnTriggerEnter2D(Collider2D obj)
+  {
+    if(obj.name == "Player")
+    {
+      obj.GetComponent<LifeAndDeath>().TakeDamage(damage);
+    }
+  }
 }

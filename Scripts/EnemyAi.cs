@@ -17,6 +17,7 @@ public class EnemyAi : MonoBehaviour
     void Start()
     {
       sr = GetComponent<SpriteRenderer>();
+      timer = changeTimer;
     }
     void Update()
     {
@@ -33,18 +34,18 @@ public class EnemyAi : MonoBehaviour
       {
         if(direction < 0)
         {
-          sr.flipX = false;
+          sr.flipX = true;
         }
         else if(direction > 0)
         {
-          sr.flipX = true;
+          sr.flipX = false;
         }
-        Vector2 position = new Vector2(speed * direction, 0);
+        Vector2 position = new Vector2(speed * -direction, 0);
         transform.Translate(position);
       }
       if(vertical)
       {
-        Vector2 position = new Vector2(0, speed * direction);
+        Vector2 position = new Vector2(0, speed * -direction);
         transform.Translate(position);
       }
     }
