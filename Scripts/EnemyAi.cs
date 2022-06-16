@@ -8,6 +8,7 @@ public class EnemyAi : MonoBehaviour
   public float changeTimer;
   public float speed;
   public bool vertical;
+  public bool startOppositeDirection;
   private Rigidbody2D rb;
   private float timer;
   private SpriteRenderer sr;
@@ -18,6 +19,10 @@ public class EnemyAi : MonoBehaviour
     {
       sr = GetComponent<SpriteRenderer>();
       timer = changeTimer;
+      if(startOppositeDirection)
+      {
+        direction *= -1;
+      }
     }
     void Update()
     {
