@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class victory : MonoBehaviour
 {
@@ -11,11 +11,12 @@ public class victory : MonoBehaviour
     {
         if (other.gameObject.GetComponent<CharacterController>())
         {
-            Debug.Log("game end trigger");
             exitBossRoom.SetActive(true);
+            Invoke("BackToMainMenu", 5f);
         }
     }
-
-    
-
+    void BackToMainMenu()
+    {
+      SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
+    }
 }

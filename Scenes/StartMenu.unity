@@ -372,7 +372,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 254097113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9fbf1b7779b55428470b5304e4823b, type: 3}
+  m_Script: {fileID: 11500000, guid: fe19957bef940a74f949158f140481e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainSceneName: Jeremy's Scene
@@ -1441,7 +1441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826020023}
-  - component: {fileID: 1826020022}
+  - component: {fileID: 1826020024}
   m_Layer: 0
   m_Name: VolumeManager
   m_TagString: volume
@@ -1449,20 +1449,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1826020022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826020021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50680f72fbe3afc4db70d9ba9bd5689c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingVolume: 1
-  volume: {fileID: 1906097793}
 --- !u!4 &1826020023
 Transform:
   m_ObjectHideFlags: 0
@@ -1478,6 +1464,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826020024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826020021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53fe6df637656a4db0e7c3ff8555590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingVolume: 1
+  volume: {fileID: 1906097793}
 --- !u!1 &1848470455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1826020022}
+      - m_Target: {fileID: 1826020024}
         m_TargetAssemblyTypeName: Volume, Assembly-CSharp
         m_MethodName: set_VolumeValue
         m_Mode: 0

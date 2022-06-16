@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5598653739531592184}
   - component: {fileID: 8075889367601418409}
+  - component: {fileID: 5883139259170628962}
   m_Layer: 0
   m_Name: hitenemy
   m_TagString: Untagged
@@ -128,6 +129,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5883139259170628962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580525485366655670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af38040eb466a145ba312641d311317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4320405524797739326
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320405524797739320}
   - component: {fileID: 4320405524797739327}
-  - component: {fileID: 4851380356312933493}
+  - component: {fileID: 2020067299963763534}
   m_Layer: 0
   m_Name: destroy
   m_TagString: Untagged
@@ -257,7 +270,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4851380356312933493
+--- !u!114 &2020067299963763534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,7 +279,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4320405524797739326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3ad2f15faf014b95fa29f88e2d52d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5af38040eb466a145ba312641d311317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4320405525318378061

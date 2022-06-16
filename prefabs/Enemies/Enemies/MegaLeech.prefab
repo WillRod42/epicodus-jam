@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8033526371667283362}
   - component: {fileID: 7877367736068024777}
+  - component: {fileID: 3385347064115820075}
   m_Layer: 0
   m_Name: hitenemy
   m_TagString: Untagged
@@ -128,6 +129,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3385347064115820075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758182444828237796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af38040eb466a145ba312641d311317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7674782434018373080
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7674782435221919610}
   - component: {fileID: 7674782435221919613}
-  - component: {fileID: 9004588055363294872}
+  - component: {fileID: 3813868432213661959}
   m_Layer: 0
   m_Name: destroy
   m_TagString: Untagged
@@ -478,7 +491,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9004588055363294872
+--- !u!114 &3813868432213661959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -487,7 +500,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7674782435221919612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3ad2f15faf014b95fa29f88e2d52d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5af38040eb466a145ba312641d311317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2055858146
@@ -741,7 +754,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -785,8 +798,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mega Leech
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
