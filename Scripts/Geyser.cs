@@ -39,7 +39,6 @@ public class Geyser : MonoBehaviour
         timerForFalling -= Time.fixedDeltaTime;
         if(timerForFalling <= 0f)
         {
-          Debug.Log("test");
           risen = false;
           falling = true;
           timerForBetweenRising = timeBetweenRising;
@@ -55,7 +54,6 @@ public class Geyser : MonoBehaviour
       }
       if(!falling && timerForBetweenRising >= 0)
       {
-        Debug.Log("test2");
         timerForBetweenRising -= Time.fixedDeltaTime;
       }
     }
