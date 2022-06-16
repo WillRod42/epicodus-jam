@@ -29,7 +29,7 @@ git clone https://github.com/WillRod42/epicodus-jam
 
  <img src="/images/Screenshot1.png">
 
-3. Add the files from this github to the Assets Folder
+3. Add the all files from this github to the Assets Folder except images and README.md 
 
  <img src="/images/Screenshot2.png">
 
