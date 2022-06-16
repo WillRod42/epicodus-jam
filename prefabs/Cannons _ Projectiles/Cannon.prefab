@@ -143,8 +143,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.7386856, y: 1.7884443}
-      - {x: -0.7634887, y: 1.7928654}
+    - - {x: 0.71458864, y: 1.6599295}
+      - {x: -0.7554564, y: 1.6402541}
       - {x: -0.7803748, y: -0.92335105}
       - {x: -0.48442978, y: -1.4541128}
       - {x: -0.15931474, y: -1.5835683}
@@ -480,5 +480,3 @@ MonoBehaviour:
   firePosition: {fileID: 7354602352645057377}
   firingDirection: {x: -1, y: 0}
   cannonShotSound: {fileID: 1583685389}
-  projectilesPerFiring: 1
-  timeBetweenProjectilesInBurst: 0
