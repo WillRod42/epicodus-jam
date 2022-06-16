@@ -1,4 +1,4 @@
-<h1 align="center" style="color: green">Frog Platformer </h1>
+<h1 align="center" style="color:green">Frog Platformer </h1>
 
 <p align="center">
     <img src="https://media3.giphy.com/media/9u1J84ZtCSl9K/giphy.gif?cid=790b76117931eb6fd06ee9324ed9853668162497f525bb10&rid=giphy.gif&ct=g">
@@ -31,14 +31,14 @@ git clone https://github.com/WillRod42/epicodus-jam
 
 3. Add the files from this github to the Assets Folder
 
- <img src="https://github.com/WillRod42/epicodus-jam/images/Screenshot2.png">
+ <img src="WillRod42.github.com/epicodus-jam/images/Screenshot2.png">
 
 4. Your ready to play!
 ## How to Play
 * Movement is done with A and D keys
 * To Jump press spacebar
 * C and shift to attack
-* Enemies are rats, leeches, spiders, scorpions, and the <span style="color: red"> Mega Leech</span>. 
+* Enemies are rats, leeches, spiders, scorpions, and the <span style="color:red"> Mega Leech</span>. 
 
 ## GitHub Link
 
