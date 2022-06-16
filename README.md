@@ -58,8 +58,8 @@ git clone https://github.com/WillRod42/epicodus-jam
  Attack Animation: ![attack animation](images/Attack-Anim.gif)<br>
  Attack Sheet: ![attack animation sheet](images/Ground-attack-sheet.png)<br>
 
- Running Attack Animation: ![running attack animation](images/Running-attack-Anim.gif)<br>
- Running Attack Sheet: ![running attack animation sheet](images/walking-attack-sheet-updated.png)<br>
+ Running Attack Animation: ![running attack animation](images/Running-attack-anim.gif)<br>
+ Running Attack Sheet: ![running attack animation sheet](images/walking-attack-Sheet-updated.png)<br>
 
  Air Attack Animtion: ![air attack animation](images/Air-Attack-Anim.gif)<br>
  Air attack Sheet: ![air attack animation sheet](images/AirAttack-Sheet.png)<br>
