@@ -36,7 +36,7 @@ public class Attack : MonoBehaviour
       {
         attackSound.Play();
         attacking = true;
-        Invoke("ResetAttack", 0.4f);
+        Invoke("ResetAttack", 1f);
       }
     }
     void ResetAttack()
