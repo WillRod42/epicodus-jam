@@ -58,11 +58,11 @@ git clone https://github.com/WillRod42/epicodus-jam
  Attack Animation: ![attack animation](images/Attack-Anim.gif)<br>
  Attack Sheet: ![attack animation sheet](images/Ground-attack-sheet.png)<br>
 
- Running Attack Animation: ![running attack animation](images/Running-Attack-Anim.gif)<br>
+ Running Attack Animation: ![running attack animation](images/Running-attack-Anim.gif)<br>
  Running Attack Sheet: ![running attack animation sheet](images/walking-attack-sheet-updated.png)<br>
 
- Air Attack Animtion: ![air attack animation](images/air-Attack-Anim.gif)<br>
- Air attack Sheet: ![air attack animation sheet](images/AirAttack-sheet.png)<br>
+ Air Attack Animtion: ![air attack animation](images/Air-Attack-Anim.gif)<br>
+ Air attack Sheet: ![air attack animation sheet](images/AirAttack-Sheet.png)<br>
 
 
 #### Game world assets
@@ -74,7 +74,7 @@ git clone https://github.com/WillRod42/epicodus-jam
  Lantern Empty: ![Lantern Empty](images/lantern-inactive.png)<br>
  Lantern Lit: ![lantern Active](images/lantern-active.png)<br>
  Lantern Lit Animation: ![lantern Active Animation](images/lantern-li-2.gif)<br>
- lantern Lit Sheet: ![lantern Active Sheet](images/lantern-active-sheet.png)<br>
+ lantern Lit Sheet: ![lantern Active Sheet](images/lantern-active-Sheet.png)<br>
  * Dungeon sprites<br>
  FirePlant Barrier: ![fire plant](images/fire-plant.png)<br>
  Lava Platform: ![lava platform](images/lavaplatform.png)<br>
