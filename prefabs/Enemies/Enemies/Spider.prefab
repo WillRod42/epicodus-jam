@@ -183,8 +183,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   currentHealth: 0
   destroySound: {fileID: 2197861075828704703}
-  dropOnDeath: 0
-  dropOnDeathObject: {fileID: 0}
+  dropOnDeath: 1
+  dropOnDeathObject: {fileID: 6050910898842771011, guid: 78474e99f5be70a47aca901fe9b65db4, type: 3}
   enableOnDeath: 0
   enableOnDeathObject: {fileID: 0}
 --- !u!1 &2197861075284370150
