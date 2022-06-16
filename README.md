@@ -43,45 +43,44 @@ git clone https://github.com/WillRod42/epicodus-jam
 ## Custom assets/sprites
 #### Frog assets
 * Base Sprite<br>
- ![Frog Sprite](images/frog-sprite.png)<br>
+ ![Frog Sprite](art/sprites/frog-sprite.png)<br>
 
-* Idle Animation<br>
  Idle Animation: ![Idle animation](images/idle-animation.gif)<br>
- Idle Sheet: ![Idle animation sheet](images/Idle-Sheet.png)<br>
+ Idle Sheet: ![Idle animation sheet](art/sprites/Idle-Sheet.png)<br>
 
 * Movement Animations<br>
  Walking Animation: ![walk animation](images/walking.gif)<br> 
- Walking Sheet: ![walk animation sheet](images/walking-sheet.png)<br> 
+ Walking Sheet: ![walk animation sheet](art/sprites/walking-sheet.png)<br> 
  Jump Animation: ![jump animation](images/jump.gif)<br>
- Jump Sheet: ![walk animation sheet](images/jumping-sheet-longer.png)<br> 
+ Jump Sheet: ![walk animation sheet](art/sprites/jumping-sheet-longer.png)<br> 
 
 * Attack Animations<br>
  Attack Animation: ![attack animation](images/Attack-Anim.gif)<br>
- Attack Sheet: ![attack animation sheet](images/Ground-attack-sheet.png)<br>
+ Attack Sheet: ![attack animation sheet](art/sprites/Ground-attack-sheet.png)<br>
 
  Running Attack Animation: ![running attack animation](images/Running-Attack-Anim.gif)<br>
- Running Attack Sheet: ![running attack animation sheet](images/walking-attack-sheet-updated.png)<br>
+ Running Attack Sheet: ![running attack animation sheet](art/sprites/walking-attack-sheet-updated.png)<br>
 
  Air Attack Animtion: ![air attack animation](images/air-Attack-Anim.gif)<br>
- Air attack Sheet: ![air attack animation sheet](images/AirAttack-sheet.png)<br>
+ Air attack Sheet: ![air attack animation sheet](art/sprites/AirAttack-sheet.png)<br>
 
 
 #### Game world assets
 * Ladybutton<br>
- ![Ladybutton unpressed](images/lady-button-default.png)<br>
- ![Ladybutton squashed](images/lady-button-squashed.png)<br>
+ ![Ladybutton unpressed](art/sprites/lady-button-default.png)<br>
+ ![Ladybutton squashed](art/sprites/lady-button-squashed.png)<br>
 * Lantern & Firefly<br>
- Firefly: ![Firefly](images/firefly.png)<br>
- Lantern Empty: ![Lantern Empty](images/lantern-inactive.png)<br>
- Lantern Lit: ![lantern Active](images/lantern-active.png)<br>
+ Firefly: ![Firefly](art/sprites/firefly.png)<br>
+ Lantern Empty: ![Lantern Empty](art/sprites/lantern-inactive.png)<br>
+ Lantern Lit: ![lantern Active](art/sprites/lantern-active.png)<br>
  Lantern Lit Animation: ![lantern Active Animation](images/lantern-li-2.gif)<br>
- lantern Lit Sheet: ![lantern Active Sheet](images/lantern-active-sheet.png)<br>
+ lantern Lit Sheet: ![lantern Active Sheet](art/sprites/lantern-active-sheet.png)<br>
  * Dungeon sprites<br>
- FirePlant Barrier: ![fire plant](images/fire-plant.png)<br>
- Lava Platform: ![lava platform](images/lavaplatform.png)<br>
+ FirePlant Barrier: ![fire plant](art/sprites/fire-plant.png)<br>
+ Lava Platform: ![lava platform](art/sprites/lavaplatform.png)<br>
 * Tiles
- Dirt: ![dirt tiles](images/dirt.png)<br> 
- Stone: ![stone tile](images/stone.png)<br> 
+ Dirt: ![dirt tiles](art/sprites/dirt.png)<br> 
+ Stone: ![stone tile](art/sprites/stone.png)<br> 
  Water: ![water tiles](images/water-tileset.png)<br> 
  Lava: ![lava tiles](images/lava.png)<br> 
 
