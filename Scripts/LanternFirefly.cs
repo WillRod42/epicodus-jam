@@ -36,8 +36,8 @@ public class LanternFirefly : MonoBehaviour
 
         if(other.gameObject.GetComponent<CharacterController>() && gameObject.tag == "Firefly")
         {
-            Destroy(firefly);
             other.gameObject.GetComponent<CharacterController>().hasFirefly = true;
+            Destroy(firefly);
         }
     }
 }
