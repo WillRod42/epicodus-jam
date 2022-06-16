@@ -27,7 +27,7 @@ git clone https://github.com/WillRod42/epicodus-jam
 ```
 2. Create a new 2D project in unity
 
- <img src="https://github.com/WillRod42/epicodus-jam/images/Screenshot1.png">
+ <img src="/images/Screenshot1.png">
 
 3. Add the files from this github to the Assets Folder
 
