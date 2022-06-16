@@ -103,10 +103,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  destroySound: {fileID: 3265402399336224694}
   hitSound: {fileID: 0}
   healthBar: {fileID: 0}
   currentHealth: 1
+  destroySound: {fileID: 3265402399336224694}
+  dropOnDeath: 0
+  dropOnDeathObject: {fileID: 0}
+  enableOnDeath: 0
+  enableOnDeathObject: {fileID: 0}
 --- !u!50 &3265402397709313219
 Rigidbody2D:
   serializedVersion: 4
@@ -167,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTimer: 3
-  speed: 0.15
+  speed: 0.12
   vertical: 0
   startOppositeDirection: 0
 --- !u!114 &3265402397709313245

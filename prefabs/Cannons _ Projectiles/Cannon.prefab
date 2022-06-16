@@ -309,7 +309,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 027b479dcfc17f942944995207b3052f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0ee18596b7518ad4cb1c531fd108b10d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -480,3 +480,5 @@ MonoBehaviour:
   firePosition: {fileID: 7354602352645057377}
   firingDirection: {x: -1, y: 0}
   cannonShotSound: {fileID: 1583685389}
+  projectilesPerFiring: 1
+  timeBetweenProjectilesInBurst: 0
