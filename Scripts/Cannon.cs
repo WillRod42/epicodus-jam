@@ -15,7 +15,6 @@ public class Cannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
     }
 
     // Update is called once per frame
@@ -23,16 +22,21 @@ public class Cannon : MonoBehaviour
     {
       if(!fired)
       {
+        
         if(cannonShotSound != null)
         {
           cannonShotSound.Play();
         }
-        GameObject Newprojectile = Instantiate(projectile, firePosition.position, Quaternion.identity);
-        Newprojectile.GetComponent<Rigidbody2D>().AddForce(firingDirection * speed, ForceMode2D.Impulse);
-        Newprojectile.GetComponent<Projectile>().SetLifeTime(range);
-        fired =true;
+        Shoot();
         Invoke("ResetFired", timeBetweenShots);
       }
+    }
+    void Shoot()
+    {
+      fired =true;
+      GameObject Newprojectile = Instantiate(projectile, firePosition.position, Quaternion.identity);
+      Newprojectile.GetComponent<Rigidbody2D>().AddForce(firingDirection * speed, ForceMode2D.Impulse);
+      Newprojectile.GetComponent<Projectile>().SetLifeTime(range);
     }
     void ResetFired()
     {
