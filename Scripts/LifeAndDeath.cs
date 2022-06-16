@@ -65,7 +65,7 @@ public class LifeAndDeath : MonoBehaviour
   {
     if(healthCheck())
     {
-      currentHealth += amount;
+      currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
       if(healthBar != null)
       { 
         healthBar.SetHealth(currentHealth);
