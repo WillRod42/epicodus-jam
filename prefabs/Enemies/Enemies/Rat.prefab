@@ -234,6 +234,7 @@ MonoBehaviour:
   destroySound: {fileID: 4320405524797739327}
   hitSound: {fileID: 0}
   healthBar: {fileID: 0}
+  currentHealth: 1
 --- !u!50 &4320405525318378058
 Rigidbody2D:
   serializedVersion: 4
@@ -296,6 +297,7 @@ MonoBehaviour:
   changeTimer: 3
   speed: 0.1
   vertical: 0
+  startOppositeDirection: 0
 --- !u!114 &4320405525318378068
 MonoBehaviour:
   m_ObjectHideFlags: 0
