@@ -89,21 +89,16 @@ public class CharacterController : MonoBehaviour
         {
             velocity = Vector2.zero;
         }
-        if(Input.GetKeyDown(KeyCode.C) && sr.flipX == false)
+        if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.C)) && sr.flipX == false)
         {
             transform.GetChild(0).gameObject.SetActive(true);
             transform.GetComponentInChildren<Attack>().ToungeAttack();
             attackPressed = true;
         }
-        else if(Input.GetKeyDown(KeyCode.C) && sr.flipX == true)
+        else if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.C)) && sr.flipX == true)
         {
             transform.GetChild(1).gameObject.SetActive(true);
             transform.GetComponentInChildren<Attack>().ToungeAttack();
-            attackPressed = true;
-        }
-
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)))
-        {
             attackPressed = true;
         }
     }
