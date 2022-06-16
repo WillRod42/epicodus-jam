@@ -46,7 +46,7 @@ git clone https://github.com/WillRod42/epicodus-jam
  ![Frog Sprite](imagesfrog-sprite.png)<br>
 
  Idle Animation: ![Idle animation](images/idle-animation.gif)<br>
- Idle Sheet: ![Idle animation sheet](images/Idle-Sheet.png)<br>
+ Idle Sheet: ![Idle animation sheet](images/idle-Sheet.png)<br>
 
 * Movement Animations<br>
  Walking Animation: ![walk animation](images/walking.gif)<br> 
