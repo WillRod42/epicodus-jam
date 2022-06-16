@@ -12,12 +12,6 @@ public class Cannon : MonoBehaviour
   public Vector2 firingDirection;
   public AudioSource cannonShotSound;
   private bool fired = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
       if(!fired)

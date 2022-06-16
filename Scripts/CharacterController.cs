@@ -58,7 +58,6 @@ public class CharacterController : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && grounded)
         {
-            Debug.Log("jump");
             PlayJumpSound();
             jumpPressed = true;
         }
@@ -199,8 +198,6 @@ public class CharacterController : MonoBehaviour
 
         animator.Play(newState);
         currentState = newState;
-
-        // Debug.Log("1 - " + animator.GetCurrentAnimatorClipInfo(0)[0].clip.name);
     }
 
     private void AttackFinished()
