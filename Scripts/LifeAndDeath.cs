@@ -6,11 +6,18 @@ using UnityEngine.SceneManagement;
 public class LifeAndDeath : MonoBehaviour
 {
   public int maxHealth;
-  public AudioSource destroySound;
   public AudioSource hitSound;
   public HealthBar healthBar;
   public int currentHealth;
+  [Header("On Death Events")]
+  public AudioSource destroySound;
+  public bool dropOnDeath;
+  public GameObject dropOnDeathObject;
+  public bool enableOnDeath;
+  public GameObject enableOnDeathObject;
   private bool destroySoundPlayed = false;
+  private bool objSpawned = false;
+  private bool objEnabled = false;
 
   // Start is called before the first frame update
   void Start()
@@ -31,6 +38,16 @@ public class LifeAndDeath : MonoBehaviour
       {
         destroySoundPlayed = true;
         destroySound.Play();
+      }
+      if(dropOnDeath && !objSpawned)
+      {
+        Instantiate(dropOnDeathObject, new Vector3 (transform.position.x, transform.position.y + 1, transform.position.z),Quaternion.identity);
+        objSpawned = true;
+      }
+      if(enableOnDeath && !objEnabled)
+      {
+        enableOnDeathObject.SetActive(true);
+        objEnabled = true;
       }
       if(gameObject.name == "Player")
       {

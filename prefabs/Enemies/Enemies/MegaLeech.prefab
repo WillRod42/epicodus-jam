@@ -110,7 +110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 625661522ee466043a902f71d9fc2f00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   destroySound: {fileID: 7674782435221919613}
   hitSound: {fileID: 0}
   healthBar: {fileID: 0}
+  currentHealth: 1
 --- !u!50 &7674782434667766792
 Rigidbody2D:
   serializedVersion: 4
@@ -200,6 +201,7 @@ MonoBehaviour:
   changeTimer: 3
   speed: 0.05
   vertical: 0
+  startOppositeDirection: 0
 --- !u!114 &7674782434667766806
 MonoBehaviour:
   m_ObjectHideFlags: 0

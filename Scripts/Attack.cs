@@ -7,11 +7,9 @@ public class Attack : MonoBehaviour
   public int damage;
   public AudioSource attackSound;
   private bool attacking;
-  // private float timer;
     // Start is called before the first frame update
     void Start()
     {
-      // attacking = false;
       gameObject.SetActive(false);
     }
     void OnTriggerEnter2D(Collider2D obj)
