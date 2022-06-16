@@ -277,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583685388}
   - component: {fileID: 1583685389}
-  - component: {fileID: 4520144586363515618}
+  - component: {fileID: 18969502472030127}
   m_Layer: 0
   m_Name: cannonshoot
   m_TagString: Untagged
@@ -396,7 +396,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4520144586363515618
+--- !u!114 &18969502472030127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1583685387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3ad2f15faf014b95fa29f88e2d52d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5af38040eb466a145ba312641d311317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7354602352645057378
