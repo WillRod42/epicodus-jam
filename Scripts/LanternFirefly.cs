@@ -28,7 +28,6 @@ public class LanternFirefly : MonoBehaviour
     {
         if(other.gameObject.GetComponent<CharacterController>() && gameObject.tag == "Lantern" && other.gameObject.GetComponent<CharacterController>().hasFirefly)
         {
-            Debug.Log("unlocked");
             open = true;
             spriteRenderer.sprite = newSprite;
             Destroy(lockedItem);
