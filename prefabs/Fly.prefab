@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6daa1fe2672a2540b98d2aea449be11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healingAmount: 0
+  healingAmount: 2
   pickUpSound: {fileID: 6050910899478038092}
 --- !u!61 &6050910898842771010
 BoxCollider2D:

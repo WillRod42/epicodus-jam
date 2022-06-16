@@ -231,10 +231,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  destroySound: {fileID: 4320405524797739327}
   hitSound: {fileID: 0}
   healthBar: {fileID: 0}
   currentHealth: 1
+  destroySound: {fileID: 4320405524797739327}
+  dropOnDeath: 1
+  dropOnDeathObject: {fileID: 6050910898842771011, guid: 78474e99f5be70a47aca901fe9b65db4, type: 3}
+  enableOnDeath: 0
+  enableOnDeathObject: {fileID: 0}
 --- !u!50 &4320405525318378058
 Rigidbody2D:
   serializedVersion: 4
