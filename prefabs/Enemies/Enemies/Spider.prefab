@@ -179,10 +179,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  destroySound: {fileID: 2197861075828704703}
   hitSound: {fileID: 0}
   healthBar: {fileID: 0}
   currentHealth: 0
+  destroySound: {fileID: 2197861075828704703}
+  dropOnDeath: 0
+  dropOnDeathObject: {fileID: 0}
+  enableOnDeath: 0
+  enableOnDeathObject: {fileID: 0}
 --- !u!1 &2197861075284370150
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2197861075828704672}
   - component: {fileID: 2197861075828704703}
+  - component: {fileID: 807396915825334001}
   m_Layer: 0
   m_Name: destroy
   m_TagString: Untagged
@@ -343,3 +348,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &807396915825334001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2197861075828704673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3ad2f15faf014b95fa29f88e2d52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

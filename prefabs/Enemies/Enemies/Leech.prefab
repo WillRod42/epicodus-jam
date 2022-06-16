@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083717195329580623}
   - component: {fileID: 1083717195329580616}
+  - component: {fileID: 7285547338658793115}
   m_Layer: 0
   m_Name: destroy
   m_TagString: Untagged
@@ -128,6 +129,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7285547338658793115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083717195329580617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3ad2f15faf014b95fa29f88e2d52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1083717195882749242
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,10 +244,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  destroySound: {fileID: 1083717195329580616}
   hitSound: {fileID: 0}
   healthBar: {fileID: 0}
   currentHealth: 0
+  destroySound: {fileID: 1083717195329580616}
+  dropOnDeath: 0
+  dropOnDeathObject: {fileID: 0}
+  enableOnDeath: 0
+  enableOnDeathObject: {fileID: 0}
 --- !u!50 &1083717195882749245
 Rigidbody2D:
   serializedVersion: 4
