@@ -8,6 +8,5 @@ public class VolumeController : MonoBehaviour
     {
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.volume = GameObject.FindGameObjectWithTag("volume").GetComponent<Volume>().VolumeValue;
-        Debug.Log(GameObject.FindGameObjectWithTag("volume").GetComponent<Volume>().VolumeValue);
     }
 }
