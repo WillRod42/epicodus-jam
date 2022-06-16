@@ -43,7 +43,7 @@ git clone https://github.com/WillRod42/epicodus-jam
 ## Custom assets/sprites
 #### Frog assets
 * Base Sprite<br>
- ![Frog Sprite](imagesfrog-sprite.png)<br>
+ ![Frog Sprite](images/frog-sprite.png)<br>
 
  Idle Animation: ![Idle animation](images/idle-animation.gif)<br>
  Idle Sheet: ![Idle animation sheet](images/idle-Sheet.png)<br>
