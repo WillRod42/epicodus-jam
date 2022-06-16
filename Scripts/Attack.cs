@@ -14,20 +14,12 @@ public class Attack : MonoBehaviour
       // attacking = false;
       gameObject.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-      // timer -= Time.deltaTime;
-    }
     void OnTriggerEnter2D(Collider2D obj)
     {
       LifeAndDeath enemyLifeAndDeath = obj.GetComponent<LifeAndDeath>();
       if(enemyLifeAndDeath != null && enemyLifeAndDeath.currentHealth > 0)
       {
         enemyLifeAndDeath.TakeDamage(damage);
-        // timer = 0.4f;
-        // timer <= 0 
       }
     }
     public void ToungeAttack()
